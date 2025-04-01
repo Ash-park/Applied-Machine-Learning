@@ -1,0 +1,21 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\Dell\ML\Projects\AML\Assignment_3
+plugins: cov-6.1.0
+collected 8 items
+
+test.py ........                                                         [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.12.2-final-0 _______________
+
+Name            Stmts   Miss  Cover
+-----------------------------------
+app.py             24     12    50%
+flask_demo.py      10     10     0%
+request.py          5      5     0%
+score.py           14      0   100%
+test.py            49      8    84%
+-----------------------------------
+TOTAL             102     35    66%
+======================= 8 passed, 19 warnings in 11.62s =======================
