@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Only run tests on the 'main' branch
+current_branch=$(git symbolic-ref --short HEAD)
+
+if [[ "$current_branch" != "main" ]]; then
+    # Not on main branch, skip checks
+    exit 0
+fi
+
+# Move to the assignment directory and execute tests
+cd Assignment_4 || exit 1
+python3 test.py
+exit_code=$?
+
+# Abort the commit if tests did not pass
+if [[ $exit_code -ne 0 ]]; then
+    echo "❌ Commit blocked: test suite failed."
+    exit 1
+fi
+
+exit 0
